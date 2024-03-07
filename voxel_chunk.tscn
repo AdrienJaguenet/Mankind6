@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bisrrr2i5mbca"]
+
+[ext_resource type="Script" path="res://voxel_chunk.gd" id="1_umux2"]
+[ext_resource type="Texture2D" uid="uid://c75kmxfqxmunu" path="res://texture_pack.png" id="2_ipi2l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xifbi"]
+albedo_texture = ExtResource("2_ipi2l")
+normal_enabled = true
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ijest"]
+
+[node name="VoxelChunk" type="Node3D"]
+script = ExtResource("1_umux2")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_xifbi")
+mesh = SubResource("ArrayMesh_ijest")
